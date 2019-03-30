@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>HZSK Federated Content Search for ANNIS SRU servlet</display-name>
+    <description>
+      A web service that can search HZSK corpora in ANNIS and with
+      FCS queries and responses
+    </description>
+    <servlet>
+        <servlet-name>SRUServerServlet</servlet-name>
+        <servlet-class>
+            eu.clarin.sru.server.utils.SRUServerServlet
+        </servlet-class>
+        <init-param>
+            <param-name>eu.clarin.sru.server.utils.sruServerSearchEngineClass</param-name>
+            <param-value>de.uni_hamburg.corpora.sru.HZSKSRUSearchEngine</param-value>
+        </init-param>
+        <init-param>
+            <param-name>eu.clarin.sru.server.host</param-name>
+            <param-value>corpora.uni-hamburg.de</param-value>
+        </init-param>
+        <init-param>
+            <param-name>eu.clarin.sru.server.port</param-name>
+            <param-value>8080</param-value>
+        </init-param>
+        <init-param>
+            <param-name>eu.clarin.sru.server.database</param-name>
+            <param-value>HzskSru</param-value>
+        </init-param>
+        <init-param>
+            <param-name>eu.clarin.sru.server.sruSupportedVersionMax</param-name>
+            <param-value>2.0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>eu.clarin.sru.server.legacyNamespaceMode</param-name>
+            <param-value>loc</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SRUServerServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>

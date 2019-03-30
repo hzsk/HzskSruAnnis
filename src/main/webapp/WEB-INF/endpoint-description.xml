@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ed:EndpointDescription
+    xmlns:ed="http://clarin.eu/fcs/endpoint-description" version="2">
+  <ed:Capabilities>
+    <ed:Capability>http://clarin.eu/fcs/capability/basic-search</ed:Capability>
+    <ed:Capability>http://clarin.eu/fcs/capability/advanced-search</ed:Capability>
+  </ed:Capabilities>
+  <ed:SupportedDataViews>
+    <ed:SupportedDataView id="kwic_dataview" delivery-policy="need-to-request"
+      >application/x-clarin-fcs-kwic+xml</ed:SupportedDataView>
+    <ed:SupportedDataView id="hits_dataview" delivery-policy="send-by-default"
+      >application/x-clarin-fcs-hits+xml</ed:SupportedDataView>
+    <ed:SupportedDataView id="adv_dataview" delivery-policy="send-by-default"
+      >application/x-clarin-fcs-adv+xml</ed:SupportedDataView>
+  </ed:SupportedDataViews>
+  <ed:SupportedLayers>
+    <ed:SupportedLayer id="layer_orth"
+          result-id="http://www.corpora.uni-hamburg.de/layers/orth1">
+        orth
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_lemma"
+        result-id="http://www.corpora.uni-hamburg.de/layers/lemma1"
+        qualifier="lemma">
+        lemma
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_stts"
+        result-id="http://www.corpora.uni-hamburg.de/layers/pos1"
+        alt-value-info="stts"
+        alt-value-info-uri="http://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-table.html">
+        pos
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_stts2"
+        result-id="http://www.corpora.uni-hamburg.de/layers/pos2"
+        qualifier="sup"
+        alt-value-info="stts too"
+        alt-value-info-uri="http://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-table.html">
+        pos
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_phonetic"
+        result-id="http://www.corpora.uni-hamburg.de/layers/phon1"
+        qualifier="phonetic">
+        phonetic
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_disfluency"
+          result-id="http://www.corpora.uni-hamburg.de/layers/x-disfluency1">
+        x-disfluency
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_xc"
+          result-id="http://www.corpora.uni-hamburg.de/layers/x-c">
+        x-c
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_pos"
+          result-id="http://www.corpora.uni-hamburg.de/layers/pos">
+        pos
+    </ed:SupportedLayer>
+    <ed:SupportedLayer id="layer_msd"
+          result-id="http://www.corpora.uni-hamburg.de/layers/msd">
+        msd
+    </ed:SupportedLayer>
+  </ed:SupportedLayers>
+  <ed:Resources>
+    <!-- HZSK/ren/metadata/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0007-C4B1-3">
+      <ed:Title xml:lang="deu">Referenzkorpus Mittelniederdeutsch/Niederrheinisch (1200-1650)</ed:Title>
+      <ed:Title xml:lang="en">Reference Corpus Middle Low German/Low Rhenish (1200-1650)</ed:Title>
+      <ed:Description xml:lang="en">The reference corpus of Middle Low German
+          and Low Rhenish texts is based on manuscripts, prints and
+          inscriptions. It is intended to provide an insight into the culture
+          of speech and writing in Middle Low German and Low Rhenish regions.
+          This spectrum of texttypes can be used to trace the linguistic
+          development on the base of diatopic and diacronic subcategorisation.
+          The aim of the project is the publication of diplomatic transcribed,
+          lemmatised and grammatically annotated texts. The processed data
+          – especially on the grammatical level – enables a
+          linguistic analysis of the Middle Low German and Low Rhenish
+          language, which goes far beyond what was possible until
+          now.</ed:Description>
+      <ed:Description xml:lang="deu">Das Referenzkorpus mittelniederdeutscher
+          und niederrheinischer Texte basiert auf Handschriften, Drucken und
+          Inschriften. Es soll einen Einblick in die Sprach- und Textkultur des
+          niederdeutschen und niederrheinischen Raums geben. Die historische
+          Sprachentwicklung soll in ihrer diatopischen und diachronischen
+          Untergliederung anhand des Textsortenspektrums nachgezeichnet werden.
+          Das Ziel des Projektes besteht in der Veröffentlichung diplomatisch
+          transkribierter, lemmatisierter und grammatisch annotierter Texte.
+          Die so bearbeiteten Daten ermöglichen - insbesondere auf
+          grammatischer Ebene - sprachwissenschaftliche Analysen des
+          Mittelniederdeutschen und Niederrheinischen, die weit über das bisher
+          Mögliche hinausgehen.</ed:Description>
+      <ed:Languages>
+        <ed:Language>gml</ed:Language>
+        <ed:Language>mis</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview adv_dataview"/>
+      <ed:AvailableLayers ref="layer_orth layer_pos layer_lemma layer_msd"/>
+    </ed:Resource>
+    <!-- SFB-632/a5.hausa.news/cmdi -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-82AC-B">
+      <ed:Title xml:lang="en">A5 Hausa News</ed:Title>
+      <ed:Description xml:lang="en">This corpus of news articles from the
+        online news service of Deutsche Welle contains 4 texts with a total of
+        2017 tokens.</ed:Description>
+      <ed:Languages>
+        <ed:Language>hau</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+      <!-- SFB-632/a5.hausa.umarnin.uwa/cmdi -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-82AD-A">
+      <ed:Title xml:lang="en">A5 Hausa Umarnin Uwa</ed:Title>
+      <ed:Description xml:lang="en">This corpus of Umarnin Uwa film
+        transcripts contains 47 transcripts with a total of 10194 tokens. It
+        provides information including automatic POS tagging, speaker and
+        extralinguistic information, foreign words and
+        code-switching.</ed:Description>
+      <ed:Languages>
+        <ed:Language>hau</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+      <!-- SFB-632/b1.aja/cmdi -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B1C-3">
+      <ed:Title xml:lang="en">B1 Aja</ed:Title>
+      <ed:Description xml:lang="en">The data sets for each language consist of
+        a small number of mini-dialogues, chosen out of the 189 entries within
+        the Focus Translation Task (cf. Skopeteas et al. 2006: 209ff.) in order
+        to get a basic set of utterances for comparison between the languages
+        dealt with in the project.</ed:Description>
+      <ed:Languages>
+        <ed:Language>aja</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+      <!-- SFB-632/b1.fon/cmdi -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B2C-1">
+      <ed:Title xml:lang="en">B1 Fon</ed:Title>
+      <ed:Description xml:lang="en">The data sets for each language consist of
+        a small number of mini-dialogues, chosen out of the 189 entries within
+        the Focus Translation Task (cf. Skopeteas et al. 2006: 209ff.) in order
+        to get a basic set of utterances for comparison between the languages
+        dealt with in the project.</ed:Description>
+      <ed:Languages>
+        <ed:Language>fon</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b1.foodo/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B2B-2">
+      <ed:Title xml:lang="en">B1 Foodo</ed:Title>
+      <ed:Description xml:lang="en">The data sets for each language consist of
+        a small number of mini-dialogues, chosen out of the 189 entries within
+        the Focus Translation Task (cf. Skopeteas et al. 2006: 209ff.) in order
+        to get a basic set of utterances for comparison between the languages
+        dealt with in the project.</ed:Description>
+      <ed:Languages>
+        <ed:Language>fod</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b1.yom/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B2A-3">
+      <ed:Title xml:lang="en">B1 Yom</ed:Title>
+      <ed:Description xml:lang="en">The data sets for each language consist of
+        a small number of mini-dialogues, chosen out of the 189 entries within
+        the Focus Translation Task (cf. Skopeteas et al. 2006: 209ff.) in order
+        to get a basic set of utterances for comparison between the languages
+        dealt with in the project.</ed:Description>
+      <ed:Languages>
+        <ed:Language>pil</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b2.bura/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B29-4">
+      <ed:Title xml:lang="en">B2 Bura</ed:Title>
+      <ed:Description xml:lang="en">Full set: all focus related experiments,
+        status: work in progress, large parts elicited, most of the data
+        transcribed, partly annotated</ed:Description>
+      <ed:Languages>
+        <ed:Language>bwr</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b2.guruntum/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B28-5">
+      <ed:Title xml:lang="en">B2 Guruntum</ed:Title>
+      <ed:Description xml:lang="en">Guruntum sample: sample, status: final,
+        manually transcribed, glossed and translated to English, annotated wrt.
+        morphology, parts of speech, syntax, gramm. function, sem. roles, focus
+        and focus position (e.g. ex situ) in EXMARaLDA.</ed:Description>
+      <ed:Languages>
+        <ed:Language>grd</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b2.guruntum/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B27-6">
+      <ed:Title xml:lang="en">B2 Hausa</ed:Title>
+      <ed:Description xml:lang="en">Hausa:  complete set, status: final,
+        manually transcribed, glossed and translated to English, annotated wrt.
+        morphology, parts of speech, syntax, gramm. function, sem. roles, focus
+        and focus position (e.g. ex situ) in EXMARaLDA.</ed:Description>
+      <ed:Languages>
+        <ed:Language>hau</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b2.marghi/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B26-7">
+      <ed:Title xml:lang="en">B2 Marghi</ed:Title>
+      <ed:Description xml:lang="en">Full set: all focus related experiments,
+        status: work in progress, large parts elicited, most of the data
+        transcribed, partly annotated.</ed:Description>
+      <ed:Languages>
+        <ed:Language>mrt</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b2.tangale/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B25-8">
+      <ed:Title xml:lang="en">B2 Tangale</ed:Title>
+      <ed:Description xml:lang="en">Tangale sample: sample, status: final,
+        manually transcribed, glossed and translated to English, annotated wrt.
+        morphology, parts of speech, syntax, gramm. function, sem. roles, focus
+        and focus position (e.g. ex situ) in EXMARaLDA.</ed:Description>
+      <ed:Languages>
+        <ed:Language>tan</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.heliand/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B24-9">
+      <ed:Title xml:lang="en">B4 Heliand</ed:Title>
+      <ed:Description xml:lang="en">Heliand 1, 4 and 5: complete text, status:
+        final, digitalization, translation to Modern German, manually annotated
+        with parts of speech, syntactic categories, grammatical functions, clause
+        status, numbers of syllables (per constituent), alliteration, information
+        status, topic/comment, position of phrase in sentence, definiteness,
+        focus/background, focus-marker, comments on context, source
+        (bibliography).</ed:Description>
+      <ed:Languages>
+        <ed:Language>goh</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.hipkon/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B23-A">
+      <ed:Title xml:lang="en">B4 Historisches Predigtenkorpus zum Nachfeld</ed:Title>
+      <ed:Description xml:lang="en">HIPKON is the first corpus based on only
+        one text type (sermons) and on one dialect area, Upper German
+        (Bavarian-Alemannic). The sermons cover the time from Middle High German
+        to the beginning of the New High German period. They were accurately
+        selected so that each of them is representative of one century. Among
+        others, syntax, information structure and discourse structure were
+        annotated in the corpus.</ed:Description>
+      <ed:Description xml:lang="deu">Das Korpus beinhaltet Predigttexte aus dem
+        Oberdeutschen (bairisch-alemannisch). Jedes Teilkorpus hat einen Umfang
+        von etwa 12.000 bis max. 17.000 Wortformen, der zeitliche Abstand
+        zwischen den Texten beträgt etwa 100 Jahre, so dass jedes Jahrhundert
+        durch ein Teilkorpus repräsentiert wird. Lediglich für das 15.
+        Jahrhundert liegt kein Teilkorpus vor, da aus dieser Epoche generell sehr
+        wenige Predigten überliefert sind. Das Korpus ist ein multi-layer Korpus,
+        das nur in den für die Forschungfrage relevanten Belegen (Hauptsätze mit
+        komplexem Verbgefüge mit Nachfeldbesetzung) annotiert
+        wurde.</ed:Description>
+      <ed:Languages>
+        <ed:Language>deu</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.ludolf/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B22-B">
+      <ed:Title xml:lang="en">B4 Ludolf</ed:Title>
+      <ed:Description xml:lang="en">The texts of this corpus, Ludolf von
+        Sudheims Reise ins Heilige Land (Ludolf of Sudheim’s Journey to the
+        Holy Land), is a journey diary describing the adventures of a group of
+        pilgrims, written in Middle Low German and dated back to 1350. For
+        information on the properties of the text, including the manuscripts,
+        see Blust-Thiele (1985). This corpus uses the text edition by
+        Stapelmohr (1937). The first 20 pages of it are tagged for clause type
+        and grammatical function. The corpus includes 6,690
+        tokens.</ed:Description>
+      <ed:Languages>
+        <ed:Language>gml</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.muspilli/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B21-C">
+      <ed:Title xml:lang="en">B4 Muspilli</ed:Title>
+      <ed:Description xml:lang="en">Complete text, status: work in progress,
+        digitalization, translation to English, manually annotated with parts
+        of speech, syntactic category, grammatical function, clause status,
+        numbers of syllables (per constituent), information status,
+        topic/comment, position of constituent in sentence, definiteness,
+        focus/background, focus marker, comments, source
+        (bibliography).</ed:Description>
+      <ed:Languages>
+        <ed:Language>goh</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.otfrid/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B20-D">
+      <ed:Title xml:lang="en">B4 Otfrid</ed:Title>
+      <ed:Description xml:lang="de-DE">Das Referenzkorpus Altdeutsch erfasst
+        und annotiert die ältesten Sprachdenkmäler des Deutschen vom Beginn der
+        kontinuierlichen schriftlichen Überlieferung um 750 bis etwa 1050 mit
+        einem Umfang von ca. 650 000 Textwörtern. Aufgenommen werden alle in
+        dieser Zeit überlieferten Texte des Althochdeutschen und des
+        Altsächsischen in einer möglichst genauen Wiedergabestufe. Dabei werden
+        die handschriftengetreuesten gedruckten Texteditionen zugrundegelegt.
+        Die Annotation erfasst Header-Informationen, strukturelle (Wort, Satz,
+        Zeile, Absatz etc.) und linguistische Annotationen (Part of
+        Speech-Tagging, Flexionsmorphologie) sowie syntaktische
+        Satzinformationen und erfolgt mit Unterstützung einer
+        semi-automatischen Vorannotation, die mit Hilfe der digitalisierten
+        Sprachstufen- und Textwörterbücher und Glossare zum Althochdeutschen
+        und zum Altsächsischen erzeugt wurde. Die verschiedenen Stufen der
+        Annotation werden in Form einer Mehrebenenarchitektur aufeinander
+        bezogen.</ed:Description>
+      <ed:Description xml:lang="en">The reference corpus Old German contains
+        (annotated) data from the oldest language monuments of German before
+        the continuous written transduction around 750 until 1050 with approx.
+        650,000 text words.</ed:Description>
+      <ed:Languages>
+        <ed:Language>goh</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.saechsische.weltchronik/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B1F-0">
+      <ed:Title xml:lang="en">B4 Sächsische Weltchronik</ed:Title>
+      <ed:Description xml:lang="en">The corpus contains a chronic from the
+        13th century in Middle Low German.</ed:Description>
+      <ed:Description xml:lang="de-DE">Es handelt sich um eine Chronik, in
+        Mittelniederdeutsch, 13 Jh. Beschreibung der Textzeugen usw. in:
+        Herkommer, Hubert (1985): Sächsische Weltchronik. In: Kurt Ruh, Gundolf
+        Keil, Werner Schröder, Burghart Wachinger and Franz Josef Worstbrock
+        (Hg.): Die deutsche Literatur des Mittelalters. Verfasserlexikon. Band
+        8. Zweite, völlig neu bearbeitete Auflage. Berlin/New York, Sp.
+        473-500. In Exmaralda eingefügt sind 50 Seiten von dieser Textausgabe:
+        Weiland, Ludwig (Hg.) (1980): Sächsische Weltchronik. Unveränderter
+        Nachdruck der Ausgabe 1877. München (= Monumenta Germaniae
+        Historica).</ed:Description>
+      <ed:Languages>
+        <ed:Language>goh</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b4.tatian/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B1E-1">
+      <ed:Title xml:lang="en">B4 Tatian Corpus of Deviating Examples 2.1</ed:Title>
+      <ed:Description xml:lang="en">The present corpus, the Tatian Corpus of
+        Deviating Examples T-CODEX 2.1, provides morpho-syntactic and information
+        structural annotation of parts of the Old High German translation
+        attested in the MS St. Gallen Cod. 56, traditionally called the OHG
+        Tatian, one of the largest prose texts from the classical OHG period.
+        This corpus was designed and annotated by Project B4 of Collaborative
+        Research Center on Information Structure at Humboldt University Berlin.
+        The present corpus compiles ca. 2.000 deviating examples found in the
+        text portions of the scribes α, β, γ and ε. Each clause structure
+        represents an extra file annotated with the annotation tool EXMARaLDA and
+        searchable via ANNIS, a general-purpose tool for the publication,
+        visualisation and querying of linguistic data collections, developed by
+        Project D1 of the Collaborative Research Center on Information Structure
+        at Potsdam University.</ed:Description>
+      <ed:Languages>
+        <ed:Language>lat</ed:Language>
+        <ed:Language>goh</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview adv_dataview"/>
+      <ed:AvailableLayers ref="layer_pos"/>
+      <!--<ed:AvailableLayers ref="layer_unk_aboutness layer_unk_tok layer_unk_LAT
+        layer_unk_align layer_unk_pos layer_unk_cat layer_unk_clause-status
+        layer_unk_gf layer_unk_syl_no layer_unk_givenness layer_unk_top-comm
+        layer_unk_position layer_unk_topic-marker layer_unk_definiteness
+        layer_unk_foc-bg layer_unk_foc-marker layer_unk_context layer_unk_comment
+        layer_unk_bibl layer_unk_meta::writer layer_unk_meta::corpus-code
+        layer_unk_meta::page layer_unk_X::abbreviation layer_unk_X::sex"/>-->
+    </ed:Resource>
+    <!-- SFB-632/b7.wolof.web/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B1D-2">
+      <ed:Title xml:lang="en">B7 Wolof (web)</ed:Title>
+      <ed:Description xml:lang="en">The corpus comprises out of a collection
+        of texts from discussion forums in the web, randomly chosen for their
+        near-standard like orthography and language, and treating different
+        topics. The texts are translated manually by a mother tongue speaker and
+        automatically tagged by a part-of-speech tagger. No further annotation is
+        provided.</ed:Description>
+      <ed:Languages>
+        <ed:Language>wol</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+    <!-- SFB-632/b7.wolof.wiki/cmdi/ -->
+    <ed:Resource pid="http://hdl.handle.net/11022/0000-0000-9B2D-0">
+      <ed:Title xml:lang="en">B7 Wolof (Wikipedia)</ed:Title>
+      <ed:Description xml:lang="en">The corpus comprises out of a collection
+        of texts from the Wolof Wikipedia, randomly chosen for their
+        near-standard like orthography and language, and treating different
+        topics. The texts are translated manually by a mother tongue speaker and
+        automatically tagged by a part-of-speech tagger. No further annotation is
+        provided. </ed:Description>
+      <ed:Languages>
+        <ed:Language>wol</ed:Language>
+      </ed:Languages>
+      <ed:AvailableDataViews ref="hits_dataview"/>
+      <ed:AvailableLayers ref="layer_orth"/>
+    </ed:Resource>
+  </ed:Resources>
+</ed:EndpointDescription>
